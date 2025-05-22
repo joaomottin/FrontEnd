@@ -1,0 +1,12 @@
+# Ativar o mecanismo de reescrita de URL
+RewriteEngine On
+
+# Definir o diretório base (se necessário)
+# RewriteBase /sua-pasta/
+
+# Permitir acesso direto a arquivos e diretórios
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirecionar todas as outras requisições para o index.php
+RewriteRule ^(.*)$ index.php?p=$1

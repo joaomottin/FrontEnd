@@ -14,7 +14,6 @@
                 <a href='apagar.php?id=<?=$idTarefa?>'>[apagar]</a>
                 <a href='editar.php?id=<?=$idTarefa?>'>[editar]</a>
             </p>
-            
             <?php
         }
     }
@@ -22,7 +21,7 @@
 ?>
 
 <hr>
-<form action="add-tarefa.php" method="post">
+<form action="add-tarefa" method="post">
     Nova Tarefa: <input type="text" name="nova-tarefa">
     <input type="submit" value="Salvar">
 </form>

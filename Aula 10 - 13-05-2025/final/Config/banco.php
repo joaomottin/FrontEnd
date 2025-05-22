@@ -1,11 +1,12 @@
 <?php
 
-    $banco = new mysqli("localhost", "root", "", "php-terca-noite");
+    $banco = new mysqli("localhost:3307", "root", "", "php-terca-noite");
 
 
     function fazerLogin($usu, $sen){
         global $banco;
-        
+         $banco = new mysqli("localhost:3307", "root", "", "php-terca-noite");
+         
         var_dump($banco);
 
         $q = "SELECT * FROM usuarios WHERE usuario='$usu'";

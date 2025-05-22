@@ -14,23 +14,12 @@
     require "./Controllers/HomeController.php";
     require "./Controllers/TarefasController.php";
     
-    if($url == "login"){
-        HomeController::login();
-    }
-    else if($url == "fazer-login"){
-        HomeController::fazerLogin();
-    }
-    else if ($url == "dashboard") {
-        TarefasController::index();
-    }
-    else{
-        HomeController::index();
-    }
-
-
-
-
-
-    
-
+    match ($url) {
+    "login"        => HomeController::login(),
+    "dashboard"    => TarefasController::index(),
+    "fazer-login"  => HomeController::fazerLogin(),
+    "add-tarefa"   => TarefasController::addTarefa(),
+    "editar"       =>TarefasController::editarTarefa(),
+    default        => HomeController::index(),
+    };
 ?>

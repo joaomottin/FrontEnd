@@ -1,7 +1,4 @@
 <?php
-
-    
-
     if($_SERVER['REQUEST_METHOD'] === "POST"){
         require "banco.php";
         session_start();
@@ -11,17 +8,10 @@
         
         if(!is_null($tarefa) && !is_null($codUsuario)){
 
-            $q = "INSERT INTO tarefas (id, id_usuario, texto) 
-                    VALUES (NULL, $codUsuario, '$tarefa')";
-            
+            $q = "INSERT INTO tarefas (id, id_usuario, texto) VALUES (NULL, $codUsuario, '$tarefa')";
             $banco->query($q);
         }
-
-        header("Location: dashboard.php");
-
     } else{
-        echo "erro";
+        header("Location: dashboard");
     }
-
-
 ?>
