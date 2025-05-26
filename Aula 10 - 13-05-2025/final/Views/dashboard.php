@@ -11,8 +11,8 @@
 
             <p> 
                 <?=$tarefa->texto?>
-                <a href='apagar.php?id=<?=$idTarefa?>'>[apagar]</a>
-                <a href='editar.php?id=<?=$idTarefa?>'>[editar]</a>
+<a href='index.php?p=editar&id=<?=$idTarefa?>'>[editar]</a>
+<a href='index.php?p=apagar&id=<?=$idTarefa?>'>[apagar]</a>
             </p>
             <?php
         }

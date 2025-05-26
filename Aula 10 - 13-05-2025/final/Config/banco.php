@@ -5,7 +5,7 @@
 
     function fazerLogin($usu, $sen){
         global $banco;
-         $banco = new mysqli("localhost:3307", "root", "", "php-terca-noite");
+        $banco = new mysqli("localhost:3307", "root", "", "php-terca-noite");
          
         var_dump($banco);
 

@@ -47,11 +47,15 @@ class TarefasController {
     }
 
     public static function apagarTarefa(){
-        
+        global $banco;
+
+            $id = $_GET['id'] ?? null;
+
+    if(!is_null($id)){
+        $banco->query("DELETE FROM tarefas WHERE id=$id");
     }
 
-    public static function atualizarTarefa($idTarefa){
-        
+    header("Location: dashboard.php");
     }
 
     public static function editarTarefa(){
@@ -62,17 +66,11 @@ class TarefasController {
         header("Location: dashboard.php");
     }
 
-    require "banco.php";
     $sql = "SELECT * FROM tarefas WHERE id='$idTarefa'";
     $resp = $banco->query($sql);
-    // var_dump($resp);
     $tarefa = $resp->fetch_object();
-    //var_dump($tarefa);
-    }
 
-
-
-
+    //on building...
 }
 
 ?>

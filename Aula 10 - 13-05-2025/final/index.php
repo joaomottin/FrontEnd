@@ -20,6 +20,7 @@
     "fazer-login"  => HomeController::fazerLogin(),
     "add-tarefa"   => TarefasController::addTarefa(),
     "editar"       =>TarefasController::editarTarefa(),
+    "apagar"       =>TarefasController::apagarTarefa(),
     default        => HomeController::index(),
     };
 ?>
